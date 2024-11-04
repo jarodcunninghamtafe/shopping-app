@@ -1,17 +1,20 @@
 import React from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { Surface, Text, Switch } from "react-native-paper";
+import { StyleSheet, Button } from "react-native";
 
 export default function ProductViewScreen(props) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Product View Screen</Text>
+    <Surface style={styles.container}>
+      <Text variant="displaySmall" style={styles.title}>
+        Product View Screen
+      </Text>
       <Button
         title="Edit Product"
         onPress={() => {
           props.navigation.navigate("ProductEditScreen");
         }}
       />
-    </View>
+    </Surface>
   );
 }
 

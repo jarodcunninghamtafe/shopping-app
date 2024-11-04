@@ -1,17 +1,20 @@
 import React from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { Surface, Text, Switch } from "react-native-paper";
+import { StyleSheet, Button } from "react-native";
 
 export default function ShopViewScreen(props) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Shop View Screen</Text>
+    <Surface style={styles.container}>
+      <Text variant="displaySmall" style={styles.title}>
+        Shop View Screen
+      </Text>
       <Button
         title="View Product"
         onPress={() => {
           props.navigation.navigate("ProductViewScreen");
         }}
       />
-    </View>
+    </Surface>
   );
 }
 
